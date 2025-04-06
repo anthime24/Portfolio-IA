@@ -1,0 +1,91 @@
+Coordonnées
+antoninamouyal2@gmail.com
+
+www.linkedin.com/in/antonin-amouyal (LinkedIn)
+
+Principales compétences
+Mathématiques
+Éthique
+analyse de donées
+manipulation de données, visualisation et analyses 
+machine learning, 
+Programmation 
+HTML / CSS
+SQL
+Excel / Power BI
+Python
+Github / Git
+Scrapping Web
+
+
+
+Antonin Amouyal
+
+Étudiant à Aivancity || Je met en place des infrastructures de
+données sur mesure pour vous permettre de profiter de l’évolution
+de l’IA || en recherche de stage
+Paris, Île-de-France, France
+
+Résumé
+Actuellement étudiant à Aivancity, je mets en pratique mes
+compétences à travers des projets concrets qui me permettent
+d’explorer le pouvoir des données pour résoudre des problèmes
+réels.
+En dehors de mes études, je fait du handball depuis plus de 10
+ans, et ce sport m’a appris la discipline, l’esprit d’équipe, ainsi que
+la gestion du stress et des challenges, des qualités que j'applique
+également dans mon parcours professionnel.
+Mon objectif est de continuer à développer mes compétences en
+IA et en analyse de données, tout en restant ouvert à de nouvelles
+opportunités dans des domaines qui me passionnent, comme
+l’innovation technologique et l’entrepreneuriat.
+En rechercher de stage de 2 mois sur la période de Mai à Juillet
+dans le domaine de la Data. Je suis également ouvert aux
+opportunités en IA
+
+Expérience
+aivancity, la grande Ecole de l'IA et de la Data, Paris Ile-de France
+Nice Côte d'Azur
+student at Aivancity
+septembre 2024 - Present 
+Cachan, Île-de-France, France
+
+Auto-entrepreneur – Achat-Revente de Sneakers
+ 2022 - 2024
+Dans le cadre de mon activité d'achat-revente de sneakers, j’ai été responsable de la gestion complète des transactions, depuis l’achat des produits jusqu’à leur revente, en passant par l’analyse des performances. J'ai créé et maintenu un tableau Excel détaillant chaque transaction , ce qui m'a permis de suivre l'inventaire et de calculer la rentabilité de chaque produit, en analysant les marges bénéficiaires . J’ai également réalisé des études de marché approfondies pour identifier les tendances et ajuster les prix de vente, . Cette activité m’a permis de développer des compétences solides en prospection et en gestion de la relation client, en recherchant des clients potentiels, en négociant les prix et en assurant un suivi après-vente pour fidéliser ma clientèle . Enfin, j’ai rédigé des rapports réguliers sur les performances commerciales, fournissant des analyses pour optimiser la stratégie de vente . Grâce à cette expérience, j’ai renforcé ma capacité à prendre des décisions stratégiques basées sur des données concrètes .
+ Utilisation des techniques de web Scraping pour extraire des données sur les
+ prix, les modèles populaires et les tendances du marché. 
+
+Mon parcours à Aivancity me permet d'approfondir mes connaissances
+en intelligence artificielle, data science et machine learning grâce à une
+approche concrète basée sur des projets et le travail d'équipe. J'acquiers
+des compétences techniques en programmation, analyse de données et
+conception de modèles d'IA, tout en bénéficiant d'interventions d'experts
+du secteur lors de séminaires et workshops. La formation intègre une
+Page 1 of 2
+
+dimension éthique importante et favorise l'application pratique des savoirs à
+travers différents challenges, hackathons et expériences professionnelles en
+entreprise.
+
+ES Sucy handball
+Coach
+
+octobre 2024 - Present 
+Sucy-en-Brie, Île-de-France, France
+J'entraîne une équipe de handball, je dois gérer des séances d'entraînement
+et superviser des matchs .
+
+Formation
+aivancity School for Technology, Business & Society Paris-Cachan
+Programme grande école, Intelligence artificielle · (2024 - 2029)
+
+
+Projet :
+Voicera AI :
+Entraînement de modèles génératifs pour la création de vidéos de sincérité synthétiques. Utilisation de la méthode GAN pour entraîner un modèle de génération vidéo avec TensorFlow, pour atteindre un taux de fidélité de 92 % dans la reconnaissance de sincérité.
+
+Projet sur l'égalité entre les hommes et les femmes en entreprise :
+Réalisation d’une analyse de données en équipe pour le diagnostic égalité femmes-hommes. Traitement des données avec des bibliothèques telles que Pandas, Matplotlib et Pingouin. Création de rapports visuels interactifs via Power BI, 
+On a proposer des améliorations sur la politique de l'entreprise, tels que l'écart salarial de 15 % entre les sexes, et les tendances de promotion et augmentation . 
+
