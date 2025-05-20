@@ -138,7 +138,7 @@ const translations = {
         about: {
             title: "À Propos de Moi",
             paragraph1: "Actuellement étudiant à Aivancity, je mets en pratique mes compétences à travers des projets concrets qui me permettent d'explorer le pouvoir des données pour résoudre des problèmes réels. Mon parcours à Aivancity me permet d'approfondir mes connaissances en intelligence artificielle, data science et machine learning grâce à une approche concrète basée sur des projets et le travail d'équipe.",
-            paragraph2: "En dehors de mes études, je fait du handball depuis plus de 10 ans, et ce sport m'a appris la discipline, l'esprit d'équipe, ainsi que la gestion du stress et des challenges, des qualités que j'applique également dans mon parcours professionnel. Mon objectif est de continuer à développer mes compétences en IA et en analyse de données, tout en restant ouvert à de nouvelles opportunités dans des domaines qui me passionnent, comme l'innovation technologique et l'entrepreneuriat."
+            paragraph2: "En-dehors de mes études, je fais du handball depuis plus de 10 ans, et ce sport m'a appris la discipline, l'esprit d'équipe, ainsi que la gestion du stress et des challenges, des qualités que j'applique également dans mon parcours professionnel. Mon objectif est de continuer à développer mes compétences en IA et en analyse de données, tout en restant ouvert à de nouvelles opportunités dans des domaines qui me passionnent, comme l'innovation technologique et l'entrepreneuriat."
         },
         // Experience section
         experience: {
