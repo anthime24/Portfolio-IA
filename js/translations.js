@@ -22,7 +22,7 @@ const translations = {
         about: {
             title: "About Me",
             paragraph1: "Currently a student at Aivancity, I apply my skills through concrete projects that allow me to explore the power of data to solve real problems. My education at Aivancity deepens my knowledge in artificial intelligence, data science, and machine learning through a hands-on approach based on projects and teamwork.",
-            paragraph2: "Outside of my studies, I've been playing handball for over 10 years, which has taught me discipline, teamwork, and stress management – qualities that I also apply in my professional journey. My goal is to continue developing my skills in AI and data analysis while remaining open to new opportunities in areas that I'm passionate about, such as technological innovation and entrepreneurship."
+            paragraph2: "My goal is to continue developing my skills in AI and data analysis while remaining open to new opportunities in areas that I'm passionate about, such as technological innovation and entrepreneurship."
         },
         // Experience section
         experience: {
@@ -75,6 +75,19 @@ const translations = {
                         { name: "Pandas", icon: "fa-solid fa-table" },
                         { name: "Power BI", icon: "fa-solid fa-chart-bar" }
                     ]
+                },
+                {
+                    title: "SafeSante",
+                    icon: "fa-solid fa-heartbeat",
+                    description: "I designed and deployed a teleconsultation wait time prediction algorithm (feature engineering, training and monitoring via an interactive dashboard). Additionally, I developed an Angular/Spring Boot dashboard for real-time monitoring and historical analysis of teleconsultations, integrating interactive visualizations. These tools have improved operational monitoring, enabled real-time anomaly detection, and optimized medical workflows.",
+                    image: null,
+                    link: null,
+                    tags: [
+                        { name: "Python", icon: "fa-brands fa-python" },
+                        { name: "Angular", icon: "fa-brands fa-angular" },
+                        { name: "Spring Boot", icon: "fa-solid fa-leaf" },
+                        { name: "Machine Learning", icon: "fa-solid fa-brain" }
+                    ]
                 }
             ]
         },
@@ -83,26 +96,31 @@ const translations = {
             title: "Technical Stack",
             languages: "Programming Languages",
             tools: "Tools & Cloud",
-            libraries: "Python Libraries",
+            libraries: "Library",
             languages_items: [
                 { name: "HTML", icon: "fa-brands fa-html5" },
                 { name: "CSS", icon: "fa-brands fa-css3-alt" },
                 { name: "JavaScript", icon: "fa-brands fa-js" },
-                { name: "Python", icon: "fa-brands fa-python" }
+                { name: "Python", icon: "fa-brands fa-python" },
+                { name: "Angular", icon: "fa-brands fa-angular" },
+                { name: "Spring Boot", icon: "fa-solid fa-leaf" }
             ],
             tools_items: [
                 { name: "Git", icon: "fa-brands fa-git-alt" },
-                { name: "GitHub", icon: "fa-brands fa-github" },
                 { name: "Excel", icon: "fa-solid fa-file-excel" },
                 { name: "Power BI", icon: "fa-solid fa-chart-bar" },
-                { name: "SQL", icon: "fa-solid fa-database" }
+                { name: "SQL", icon: "fa-solid fa-database" },
+                { name: "AWS", icon: "fa-brands fa-aws" },
+                { name: "API", icon: "fa-solid fa-plug" },
+                { name: "PostgreSQL", icon: "fa-solid fa-database" }
             ],
             libraries_items: [
                 { name: "Pandas", icon: "fa-solid fa-table" },
                 { name: "BeautifulSoup", icon: "fa-solid fa-code" },
                 { name: "Playwright", icon: "fa-solid fa-theater-masks" },
                 { name: "PyTorch", icon: "fa-solid fa-fire" },
-                { name: "Matplotlib", icon: "fa-solid fa-chart-line" }
+                { name: "Matplotlib", icon: "fa-solid fa-chart-line" },
+                { name: "ngx-echarts", icon: "fa-solid fa-chart-pie" }
             ]
         },
         // Contact section
@@ -138,7 +156,7 @@ const translations = {
         about: {
             title: "À Propos de Moi",
             paragraph1: "Actuellement étudiant à Aivancity, je mets en pratique mes compétences à travers des projets concrets qui me permettent d'explorer le pouvoir des données pour résoudre des problèmes réels. Mon parcours à Aivancity me permet d'approfondir mes connaissances en intelligence artificielle, data science et machine learning grâce à une approche concrète basée sur des projets et le travail d'équipe.",
-            paragraph2: "En-dehors de mes études, je fais du handball depuis plus de 10 ans, et ce sport m'a appris la discipline, l'esprit d'équipe, ainsi que la gestion du stress et des challenges, des qualités que j'applique également dans mon parcours professionnel. Mon objectif est de continuer à développer mes compétences en IA et en analyse de données, tout en restant ouvert à de nouvelles opportunités dans des domaines qui me passionnent, comme l'innovation technologique et l'entrepreneuriat."
+            paragraph2: "Mon objectif est de continuer à développer mes compétences en IA et en analyse de données, tout en restant ouvert à de nouvelles opportunités dans des domaines qui me passionnent, comme l'innovation technologique et l'entrepreneuriat."
         },
         // Experience section
         experience: {
@@ -191,6 +209,19 @@ const translations = {
                         { name: "Pandas", icon: "fa-solid fa-table" },
                         { name: "Power BI", icon: "fa-solid fa-chart-bar" }
                     ]
+                },
+                {
+                    title: "SafeSante",
+                    icon: "fa-solid fa-heartbeat",
+                    description: "J'ai conçu et déployé un algorithme de prédiction du temps d'attente en téléconsultation (feature engineering, entraînement et suivi via un dashboard interactif). Parallèlement, j'ai développé un dashboard Angular/Spring Boot pour le monitoring en temps réel et l'analyse historique des téléconsultations, intégrant des visualisations interactives. Ces outils ont permis d'améliorer le suivi opérationnel, de détecter des anomalies en temps réel et d'optimiser les flux médicaux.",
+                    image: null,
+                    link: null,
+                    tags: [
+                        { name: "Python", icon: "fa-brands fa-python" },
+                        { name: "Angular", icon: "fa-brands fa-angular" },
+                        { name: "Spring Boot", icon: "fa-solid fa-leaf" },
+                        { name: "Machine Learning", icon: "fa-solid fa-brain" }
+                    ]
                 }
             ]
         },
@@ -199,26 +230,31 @@ const translations = {
             title: "Compétences Techniques",
             languages: "Langages de Programmation",
             tools: "Outils & Cloud",
-            libraries: "Bibliothèques Python",
+            libraries: "Library",
             languages_items: [
                 { name: "HTML", icon: "fa-brands fa-html5" },
                 { name: "CSS", icon: "fa-brands fa-css3-alt" },
                 { name: "JavaScript", icon: "fa-brands fa-js" },
-                { name: "Python", icon: "fa-brands fa-python" }
+                { name: "Python", icon: "fa-brands fa-python" },
+                { name: "Angular", icon: "fa-brands fa-angular" },
+                { name: "Spring Boot", icon: "fa-solid fa-leaf" }
             ],
             tools_items: [
                 { name: "Git", icon: "fa-brands fa-git-alt" },
-                { name: "GitHub", icon: "fa-brands fa-github" },
                 { name: "Excel", icon: "fa-solid fa-file-excel" },
                 { name: "Power BI", icon: "fa-solid fa-chart-bar" },
-                { name: "SQL", icon: "fa-solid fa-database" }
+                { name: "SQL", icon: "fa-solid fa-database" },
+                { name: "AWS", icon: "fa-brands fa-aws" },
+                { name: "API", icon: "fa-solid fa-plug" },
+                { name: "PostgreSQL", icon: "fa-solid fa-database" }
             ],
             libraries_items: [
                 { name: "Pandas", icon: "fa-solid fa-table" },
                 { name: "BeautifulSoup", icon: "fa-solid fa-code" },
                 { name: "Playwright", icon: "fa-solid fa-theater-masks" },
                 { name: "PyTorch", icon: "fa-solid fa-fire" },
-                { name: "Matplotlib", icon: "fa-solid fa-chart-line" }
+                { name: "Matplotlib", icon: "fa-solid fa-chart-line" },
+                { name: "ngx-echarts", icon: "fa-solid fa-chart-pie" }
             ]
         },
         // Contact section
