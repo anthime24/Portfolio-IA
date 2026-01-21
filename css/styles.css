@@ -475,10 +475,75 @@ ul {
     background-color: var(--background);
 }
 
-.projects-grid {
+.projects-carousel {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: 44px 1fr 44px;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.projects-viewport {
+    overflow: hidden;
+    /* Give room for card shadows/borders at the edges while keeping overflow clipped */
+    padding: 1rem;
+    margin: -1rem;
+}
+
+.projects-grid {
+    --cards-per-view: 3;
+    display: flex;
     gap: 2rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    padding-bottom: 0.5rem;
+    padding-left: 1.25rem;
+    padding-right: 1rem;
+    scroll-padding-left: 1.25rem;
+    scroll-padding-right: 1rem;
+}
+
+.projects-grid::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.projects-grid .project-card {
+    flex: 0 0 calc((100% - (2rem * (var(--cards-per-view) - 1))) / var(--cards-per-view));
+    scroll-snap-align: start;
+}
+
+.projects-nav {
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid rgba(37, 99, 235, 0.25);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+}
+
+.projects-nav:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(37, 99, 235, 0.4);
+}
+
+.projects-nav:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: var(--shadow-sm);
+}
+
+.projects-nav i {
+    font-size: 1rem;
 }
 
 .project-card {
@@ -803,6 +868,11 @@ ul {
     .contact-buttons .btn {
         width: 100%;
     }
+
+    .projects-grid {
+        --cards-per-view: 1;
+        gap: 1.25rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -815,9 +885,7 @@ ul {
         width: 100%;
     }
     
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
+    .projects-grid { --cards-per-view: 1; }
     
     .stack-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -826,6 +894,10 @@ ul {
     .project-tags {
         justify-content: center;
     }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .projects-grid { --cards-per-view: 2; }
 }
 
 /* Scroll Reveal Animation */

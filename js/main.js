@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize navigation
     initializeNavigation();
+
+    // Initialize projects carousel controls
+    initializeProjectsCarousel();
 });
 
 // Get initial language based on browser preferences or localStorage
@@ -141,6 +144,9 @@ function createDynamicContent(lang) {
     createProjects(lang);
     createTechStack(lang);
     createFloatingIcons();
+
+    // Re-sync carousel buttons after rerender
+    updateProjectsCarouselControls();
 }
 
 // Create experience timeline
@@ -249,6 +255,125 @@ function createProjects(lang) {
         
         projectsGrid.appendChild(projectCard);
     });
+}
+
+// Projects carousel controls (arrows + responsive page scroll)
+function initializeProjectsCarousel() {
+    const track = document.querySelector('.projects-grid');
+    const prevBtn = document.querySelector('.projects-nav-prev');
+    const nextBtn = document.querySelector('.projects-nav-next');
+
+    if (!track || !prevBtn || !nextBtn) return;
+
+    function getStep() {
+        // Scroll by one "page" (viewport width). Works regardless of cards-per-view.
+        return track.clientWidth;
+    }
+
+    prevBtn.addEventListener('click', () => {
+        track.scrollBy({ left: -getStep(), behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+        track.scrollBy({ left: getStep(), behavior: 'smooth' });
+    });
+
+    track.addEventListener('scroll', () => updateProjectsCarouselControls());
+    window.addEventListener('resize', () => updateProjectsCarouselControls());
+
+    // Autoplay (respects reduced motion, pauses on hover/focus, cool-down after user interaction)
+    setupProjectsCarouselAutoplay(track, prevBtn, nextBtn, getStep);
+
+    updateProjectsCarouselControls();
+}
+
+function updateProjectsCarouselControls() {
+    const track = document.querySelector('.projects-grid');
+    const prevBtn = document.querySelector('.projects-nav-prev');
+    const nextBtn = document.querySelector('.projects-nav-next');
+
+    if (!track || !prevBtn || !nextBtn) return;
+
+    const maxScrollLeft = track.scrollWidth - track.clientWidth;
+    const current = track.scrollLeft;
+    const epsilon = 2; // tolerance for sub-pixel values
+
+    const canScroll = maxScrollLeft > epsilon;
+    prevBtn.disabled = !canScroll || current <= epsilon;
+    nextBtn.disabled = !canScroll || current >= (maxScrollLeft - epsilon);
+}
+
+function setupProjectsCarouselAutoplay(track, prevBtn, nextBtn, getStep) {
+    // Don't autoplay for users who prefer reduced motion
+    const reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reducedMotion) return;
+
+    const AUTOPLAY_INTERVAL_MS = 4500;
+    const USER_PAUSE_MS = 7000;
+
+    let intervalId = null;
+    let resumeTimeoutId = null;
+    let isPaused = false;
+
+    const clearTimers = () => {
+        if (intervalId) window.clearInterval(intervalId);
+        intervalId = null;
+        if (resumeTimeoutId) window.clearTimeout(resumeTimeoutId);
+        resumeTimeoutId = null;
+    };
+
+    const pause = () => {
+        isPaused = true;
+        clearTimers();
+    };
+
+    const scheduleResume = () => {
+        clearTimers();
+        isPaused = false;
+        resumeTimeoutId = window.setTimeout(() => {
+            start();
+        }, USER_PAUSE_MS);
+    };
+
+    const stepNext = () => {
+        const maxScrollLeft = track.scrollWidth - track.clientWidth;
+        const epsilon = 2;
+
+        if (maxScrollLeft <= epsilon) return;
+
+        // If we're at the end, loop back to start
+        if (track.scrollLeft >= (maxScrollLeft - epsilon)) {
+            track.scrollTo({ left: 0, behavior: 'smooth' });
+            return;
+        }
+
+        track.scrollBy({ left: getStep(), behavior: 'smooth' });
+    };
+
+    const start = () => {
+        if (isPaused) return;
+        if (intervalId) return;
+        intervalId = window.setInterval(stepNext, AUTOPLAY_INTERVAL_MS);
+    };
+
+    // Pause on hover/focus to avoid fighting the user
+    track.addEventListener('mouseenter', pause);
+    track.addEventListener('mouseleave', start);
+    track.addEventListener('focusin', pause);
+    track.addEventListener('focusout', start);
+
+    // Any user interaction pauses autoplay for a bit
+    const userInteracted = () => {
+        pause();
+        scheduleResume();
+    };
+    prevBtn.addEventListener('click', userInteracted);
+    nextBtn.addEventListener('click', userInteracted);
+    track.addEventListener('wheel', userInteracted, { passive: true });
+    track.addEventListener('touchstart', userInteracted, { passive: true });
+    track.addEventListener('keydown', userInteracted);
+
+    start();
 }
 
 // Create technology stack

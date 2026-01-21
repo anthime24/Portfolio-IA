@@ -88,6 +88,19 @@ const translations = {
                         { name: "Spring Boot", icon: "fa-solid fa-leaf" },
                         { name: "Machine Learning", icon: "fa-solid fa-brain" }
                     ]
+                },
+                {
+                    title: "PulsOf 360",
+                    icon: "fa-brands fa-linkedin",
+                    description: "Design of an automated LinkedIn data extraction system based on dynamic content scraping, enabling collection, cleaning and structuring of post interactions for marketing analysis and competitive intelligence.",
+                    image: null,
+                    link: null,
+                    tags: [
+                        { name: "Playwright", icon: "fa-solid fa-theater-masks" },
+                        { name: "Python", icon: "fa-brands fa-python" },
+                        { name: "SQL", icon: "fa-solid fa-database" },
+                        { name: "API", icon: "fa-solid fa-plug" }
+                    ]
                 }
             ]
         },
@@ -221,6 +234,19 @@ const translations = {
                         { name: "Angular", icon: "fa-brands fa-angular" },
                         { name: "Spring Boot", icon: "fa-solid fa-leaf" },
                         { name: "Machine Learning", icon: "fa-solid fa-brain" }
+                    ]
+                },
+                {
+                    title: "PulsOf 360",
+                    icon: "fa-brands fa-linkedin",
+                    description: "Conception d’un système d’extraction automatisée de données LinkedIn, basé sur le scraping de contenus dynamiques, permettant la collecte, le nettoyage et la structuration des interactions de posts en vue d’analyses marketing et de veille concurrentielle.",
+                    image: null,
+                    link: null,
+                    tags: [
+                        { name: "Playwright", icon: "fa-solid fa-theater-masks" },
+                        { name: "Python", icon: "fa-brands fa-python" },
+                        { name: "SQL", icon: "fa-solid fa-database" },
+                        { name: "API", icon: "fa-solid fa-plug" }
                     ]
                 }
             ]

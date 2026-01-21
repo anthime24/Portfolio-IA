@@ -106,8 +106,18 @@
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title" data-i18n="projects.title"></h2>
-            <div class="projects-grid">
-                <!-- Project cards will be inserted dynamically with JavaScript -->
+            <div class="projects-carousel" aria-label="Projects carousel">
+                <button class="projects-nav projects-nav-prev" type="button" aria-label="Previous projects">
+                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                </button>
+                <div class="projects-viewport">
+                    <div class="projects-grid projects-track">
+                        <!-- Project cards will be inserted dynamically with JavaScript -->
+                    </div>
+                </div>
+                <button class="projects-nav projects-nav-next" type="button" aria-label="Next projects">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </button>
             </div>
         </div>
     </section>
