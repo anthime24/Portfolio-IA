@@ -110,22 +110,6 @@ function applyTranslations(lang) {
 
 // Clear dynamic content before recreating
 function clearDynamicContent() {
-    // Clear timeline items
-    const timelineContainer = document.querySelector('.timeline-container');
-    if (timelineContainer) {
-        // Keep the timeline line element, remove all timeline items
-        const timelineLine = timelineContainer.querySelector('.timeline-line');
-        timelineContainer.innerHTML = '';
-        if (timelineLine) {
-            timelineContainer.appendChild(timelineLine);
-        } else {
-            // If the timeline line was removed, add it back
-            const newTimelineLine = document.createElement('div');
-            newTimelineLine.className = 'timeline-line';
-            timelineContainer.appendChild(newTimelineLine);
-        }
-    }
-    
     // Clear project items
     const projectsGrid = document.querySelector('.projects-grid');
     if (projectsGrid) {
@@ -140,53 +124,12 @@ function clearDynamicContent() {
 
 // Create dynamic content
 function createDynamicContent(lang) {
-    createExperienceTimeline(lang);
     createProjects(lang);
     createTechStack(lang);
     createFloatingIcons();
 
     // Re-sync carousel buttons after rerender
     updateProjectsCarouselControls();
-}
-
-// Create experience timeline
-function createExperienceTimeline(lang) {
-    const timelineContainer = document.querySelector('.timeline-container');
-    if (!timelineContainer) return;
-    
-    // Make sure we only have the timeline line in the container
-    const timelineItems = timelineContainer.querySelectorAll('.timeline-item');
-    if (timelineItems.length > 0) {
-        // Timeline items already exist, remove them before adding new ones
-        timelineItems.forEach(item => item.remove());
-    }
-    
-    const items = translations[lang].experience.items;
-    
-    items.forEach((item, index) => {
-        // Create timeline item element
-        const timelineItem = document.createElement('div');
-        timelineItem.className = 'timeline-item';
-        
-        // Create icon based on position
-        const icon = index === 0 ? 'fa-solid fa-graduation-cap' : 
-                    index === 1 ? 'fa-solid fa-briefcase' : 'fa-solid fa-trophy';
-        
-        // HTML structure
-        timelineItem.innerHTML = `
-            <div class="timeline-icon">
-                <i class="${icon}"></i>
-            </div>
-            <div class="timeline-content">
-                <div class="timeline-date">${item.date}</div>
-                <h3 class="timeline-title">${item.title}</h3>
-                <div class="timeline-company">${item.company}</div>
-                <p class="timeline-description">${item.description}</p>
-            </div>
-        `;
-        
-        timelineContainer.appendChild(timelineItem);
-    });
 }
 
 // Create projects
@@ -202,55 +145,19 @@ function createProjects(lang) {
     const projectItems = translations[lang].projects.items;
     
     projectItems.forEach(project => {
-        const projectCard = document.createElement('div');
-        projectCard.className = 'project-card';
+        const projectCard = document.createElement('a');
+        projectCard.className = 'project-card project-card-link';
+        projectCard.href = `project.html?slug=${project.slug}`;
         
-        // Create project image section if available
-        let imageSection = '';
-        if (project.image) {
-            imageSection = `
-                <div class="project-image">
-                    <img src="${project.image}" alt="${project.title}">
-                    <div class="project-overlay">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                </div>
-            `;
-        }
-        
-        // Create tags HTML
-        const tagsHTML = project.tags.map(tag => `
-            <div class="project-tag">
-                <i class="${tag.icon}"></i>
-                <span>${tag.name}</span>
-            </div>
-        `).join('');
-        
-        // Create link HTML if available
-        let linkHTML = '';
-        if (project.link) {
-            linkHTML = `
-                <a href="${project.link}" target="_blank" class="project-link">
-                    <span>${lang === 'en' ? 'View Project' : 'Voir le Projet'}</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-            `;
-        }
-        
-        // HTML structure
         projectCard.innerHTML = `
-            ${imageSection}
-            <div class="project-content">
-                <h3 class="project-title">
-                    <i class="${project.icon}"></i>
-                    <span>${project.title}</span>
-                </h3>
-                <p class="project-description">${project.description}</p>
-                <div class="project-tags">
-                    ${tagsHTML}
-                </div>
-                ${linkHTML}
+            <div class="project-card-header">
+                <i class="${project.icon} project-card-icon"></i>
+                <span class="project-context-badge">${project.context}</span>
             </div>
+            <h3 class="project-title">${project.title}</h3>
+            <p class="project-role">${project.role}</p>
+            <p class="project-date"><i class="fas fa-calendar-alt"></i> ${project.date}</p>
+            <span class="project-card-arrow"><i class="fas fa-arrow-right"></i></span>
         `;
         
         projectsGrid.appendChild(projectCard);
