@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="wash6" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0f9ff"></stop>
+      <stop offset="1" stop-color="#e0f2fe"></stop>
+    </linearGradient>
+    <pattern id="dots6" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="1.2" cy="1.2" r="0.8" fill="#2563eb" opacity="0.18"></circle>
+    </pattern>
+  </defs>
+
+  <rect width="400" height="200" fill="url(#wash6)"></rect>
+  <rect width="400" height="200" fill="url(#dots6)"></rect>
+
+  <!-- SHIELD (left) -->
+  <rect x="28" y="48" width="60" height="58" rx="4" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"></rect>
+  <rect x="28" y="92" width="60" height="14" rx="0" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"></rect>
+  <!-- shield tip: triangle via lines -->
+  <line x1="28" y1="106" x2="58" y2="126" stroke="#2563eb" stroke-width="1.5"></line>
+  <line x1="88" y1="106" x2="58" y2="126" stroke="#2563eb" stroke-width="1.5"></line>
+  <!-- lock body -->
+  <rect x="44" y="74" width="28" height="22" rx="3" fill="#2563eb" opacity="0.85"></rect>
+  <!-- lock shackle (4 lines forming arch) -->
+  <line x1="50" y1="74" x2="50" y2="64" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round"></line>
+  <line x1="66" y1="74" x2="66" y2="64" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round"></line>
+  <line x1="50" y1="64" x2="66" y2="64" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round"></line>
+  <!-- lock keyhole -->
+  <circle cx="58" cy="83" r="3" fill="#eff6ff"></circle>
+  <rect x="56.5" y="83" width="3" height="5" fill="#eff6ff"></rect>
+  <text x="58" y="142" font-family="ui-monospace, monospace" font-size="7" fill="#1d4ed8" text-anchor="middle" font-weight="bold">SOC</text>
+
+  <!-- ALERT PANEL (centre) -->
+  <rect x="108" y="30" width="190" height="140" rx="5" fill="#fff" stroke="#1f2937" stroke-width="1.2"></rect>
+  <!-- panel header -->
+  <rect x="108" y="30" width="190" height="16" rx="5" fill="#1e3a8a" opacity="0.9"></rect>
+  <rect x="108" y="38" width="190" height="8" fill="#1e3a8a" opacity="0.9"></rect>
+  <circle cx="119" cy="38" r="2.5" fill="#f87171" opacity="0.9"></circle>
+  <circle cx="127" cy="38" r="2.5" fill="#fbbf24" opacity="0.9"></circle>
+  <circle cx="135" cy="38" r="2.5" fill="#4ade80" opacity="0.9"></circle>
+  <text x="210" y="41" font-family="ui-monospace, monospace" font-size="5.5" fill="#bfdbfe" text-anchor="middle">SOC Dashboard</text>
+
+  <!-- Alert badges row -->
+  <rect x="116" y="52" width="36" height="18" rx="2" fill="#fee2e2" stroke="#ef4444" stroke-width="0.8"></rect>
+  <text x="134" y="61" font-family="ui-monospace, monospace" font-size="5" fill="#dc2626" text-anchor="middle">CRITICAL</text>
+  <text x="134" y="67" font-family="ui-monospace, monospace" font-size="7" fill="#b91c1c" text-anchor="middle" font-weight="bold">12</text>
+
+  <rect x="158" y="52" width="36" height="18" rx="2" fill="#fef3c7" stroke="#f59e0b" stroke-width="0.8"></rect>
+  <text x="176" y="61" font-family="ui-monospace, monospace" font-size="5" fill="#d97706" text-anchor="middle">WARNING</text>
+  <text x="176" y="67" font-family="ui-monospace, monospace" font-size="7" fill="#b45309" text-anchor="middle" font-weight="bold">37</text>
+
+  <rect x="200" y="52" width="36" height="18" rx="2" fill="#dcfce7" stroke="#22c55e" stroke-width="0.8"></rect>
+  <text x="218" y="61" font-family="ui-monospace, monospace" font-size="5" fill="#16a34a" text-anchor="middle">NORMAL</text>
+  <text x="218" y="67" font-family="ui-monospace, monospace" font-size="7" fill="#15803d" text-anchor="middle" font-weight="bold">248</text>
+
+  <rect x="242" y="52" width="48" height="18" rx="2" fill="#eff6ff" stroke="#2563eb" stroke-width="0.8"></rect>
+  <circle cx="251" cy="61" r="3" fill="#3b82f6" opacity="0.8"></circle>
+  <text x="271" y="64" font-family="ui-monospace, monospace" font-size="5.5" fill="#1d4ed8" text-anchor="middle">LIVE</text>
+
+  <!-- Alert bar chart -->
+  <rect x="116" y="76" width="176" height="44" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.7"></rect>
+  <!-- grid -->
+  <line x1="116" y1="88" x2="292" y2="88" stroke="#e2e8f0" stroke-width="0.5"></line>
+  <line x1="116" y1="100" x2="292" y2="100" stroke="#e2e8f0" stroke-width="0.5"></line>
+  <line x1="116" y1="112" x2="292" y2="112" stroke="#e2e8f0" stroke-width="0.5"></line>
+  <!-- bars -->
+  <rect x="120" y="99" width="5" height="17" rx="1" fill="#3b82f6" opacity="0.7"></rect>
+  <rect x="128" y="96" width="5" height="20" rx="1" fill="#3b82f6" opacity="0.7"></rect>
+  <rect x="136" y="91" width="5" height="25" rx="1" fill="#ef4444" opacity="0.85"></rect>
+  <rect x="144" y="97" width="5" height="19" rx="1" fill="#3b82f6" opacity="0.7"></rect>
+  <rect x="152" y="100" width="5" height="16" rx="1" fill="#3b82f6" opacity="0.7"></rect>
+  <rect x="160" y="94" width="5" height="22" rx="1" fill="#f59e0b" opacity="0.8"></rect>
+  <rect x="168" y="90" width="5" height="26" rx="1" fill="#ef4444" opacity="0.85"></rect>
+  <rect x="176" y="98" width="5" height="18" rx="1" fill="#3b82f6" opacity="0.7"></rect>
+  <rect x="184" y="101" width="5" height="15" rx="1" fill="#3b82f6" opacity="0.7"></rect>
+  <rect x="192" y="95" width="5" height="21" rx="1" fill="#f59e0b" opacity="0.8"></rect>
+  <rect x="200" y="93" width="5" height="23" rx="1" fill="#ef4444" opacity="0.85"></rect>
+  <rect x="208" y="99" width="5" height="17" rx="1" fill="#3b82f6" opacity="0.7"></rect>
+  <rect x="216" y="96" width="5" height="20" rx="1" fill="#3b82f6" opacity="0.7"></rect>
+  <rect x="224" y="102" width="5" height="14" rx="1" fill="#3b82f6" opacity="0.7"></rect>
+  <rect x="232" y="97" width="5" height="19" rx="1" fill="#f59e0b" opacity="0.8"></rect>
+  <rect x="240" y="91" width="5" height="25" rx="1" fill="#ef4444" opacity="0.85"></rect>
+  <rect x="248" y="98" width="5" height="18" rx="1" fill="#3b82f6" opacity="0.7"></rect>
+  <rect x="256" y="100" width="5" height="16" rx="1" fill="#3b82f6" opacity="0.7"></rect>
+  <rect x="264" y="96" width="5" height="20" rx="1" fill="#3b82f6" opacity="0.7"></rect>
+  <rect x="272" y="93" width="5" height="23" rx="1" fill="#ef4444" opacity="0.85"></rect>
+  <rect x="280" y="99" width="5" height="17" rx="1" fill="#3b82f6" opacity="0.7"></rect>
+  <!-- x axis labels -->
+  <text x="116" y="126" font-family="ui-monospace, monospace" font-size="4.5" fill="#94a3b8">00h</text>
+  <text x="200" y="126" font-family="ui-monospace, monospace" font-size="4.5" fill="#94a3b8" text-anchor="middle">12h</text>
+  <text x="292" y="126" font-family="ui-monospace, monospace" font-size="4.5" fill="#94a3b8" text-anchor="end">24h</text>
+
+  <!-- Log lines -->
+  <rect x="116" y="130" width="88" height="32" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.7"></rect>
+  <rect x="119" y="133" width="4" height="4" rx="1" fill="#ef4444"></rect>
+  <text x="126" y="137" font-family="ui-monospace, monospace" font-size="4.5" fill="#374151">Brute force - 192.168.1.44</text>
+  <rect x="119" y="139" width="4" height="4" rx="1" fill="#f59e0b"></rect>
+  <text x="126" y="143" font-family="ui-monospace, monospace" font-size="4.5" fill="#374151">Outbound traffic - port 443</text>
+  <rect x="119" y="145" width="4" height="4" rx="1" fill="#22c55e"></rect>
+  <text x="126" y="149" font-family="ui-monospace, monospace" font-size="4.5" fill="#374151">Auth OK - admin@cyna.fr</text>
+  <rect x="119" y="151" width="4" height="4" rx="1" fill="#22c55e"></rect>
+  <text x="126" y="155" font-family="ui-monospace, monospace" font-size="4.5" fill="#374151">Scan done - 0 open ports</text>
+
+  <!-- Donut / status circle -->
+  <rect x="210" y="130" width="82" height="32" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="0.7"></rect>
+  <text x="251" y="141" font-family="ui-monospace, monospace" font-size="4.5" fill="#6b7280" text-anchor="middle">System Health</text>
+  <circle cx="225" cy="150" r="7" fill="none" stroke="#22c55e" stroke-width="3"></circle>
+  <circle cx="239" cy="150" r="7" fill="none" stroke="#f59e0b" stroke-width="3"></circle>
+  <circle cx="253" cy="150" r="7" fill="none" stroke="#ef4444" stroke-width="3"></circle>
+  <text x="225" y="153" font-family="ui-monospace, monospace" font-size="4" fill="#374151" text-anchor="middle">OK</text>
+  <text x="239" y="153" font-family="ui-monospace, monospace" font-size="4" fill="#374151" text-anchor="middle">W</text>
+  <text x="253" y="153" font-family="ui-monospace, monospace" font-size="4" fill="#374151" text-anchor="middle">C</text>
+
+  <!-- NETWORK RADAR (right) -->
+  <circle cx="348" cy="90" r="44" fill="none" stroke="#bfdbfe" stroke-width="1" opacity="0.7"></circle>
+  <circle cx="348" cy="90" r="30" fill="none" stroke="#93c5fd" stroke-width="0.9" opacity="0.7"></circle>
+  <circle cx="348" cy="90" r="16" fill="none" stroke="#60a5fa" stroke-width="0.9" opacity="0.7"></circle>
+  <!-- sweep line -->
+  <line x1="348" y1="90" x2="383" y2="62" stroke="#2563eb" stroke-width="1.2" opacity="0.55"></line>
+  <!-- network nodes -->
+  <circle cx="348" cy="90" r="4" fill="#2563eb"></circle>
+  <circle cx="366" cy="72" r="4" fill="#ef4444" opacity="0.9"></circle>
+  <circle cx="378" cy="95" r="3.5" fill="#f59e0b" opacity="0.85"></circle>
+  <circle cx="360" cy="110" r="3.5" fill="#22c55e" opacity="0.8"></circle>
+  <circle cx="334" cy="108" r="3" fill="#22c55e" opacity="0.75"></circle>
+  <circle cx="322" cy="88" r="3.5" fill="#22c55e" opacity="0.8"></circle>
+  <circle cx="330" cy="68" r="3" fill="#f59e0b" opacity="0.8"></circle>
+  <!-- connection lines -->
+  <line x1="348" y1="90" x2="366" y2="72" stroke="#2563eb" stroke-width="0.8" opacity="0.5"></line>
+  <line x1="348" y1="90" x2="378" y2="95" stroke="#2563eb" stroke-width="0.8" opacity="0.5"></line>
+  <line x1="348" y1="90" x2="360" y2="110" stroke="#2563eb" stroke-width="0.8" opacity="0.5"></line>
+  <line x1="348" y1="90" x2="334" y2="108" stroke="#2563eb" stroke-width="0.8" opacity="0.5"></line>
+  <line x1="348" y1="90" x2="322" y2="88" stroke="#2563eb" stroke-width="0.8" opacity="0.5"></line>
+  <line x1="348" y1="90" x2="330" y2="68" stroke="#2563eb" stroke-width="0.8" opacity="0.5"></line>
+  <text x="348" y="148" font-family="ui-monospace, monospace" font-size="6" fill="#1d4ed8" text-anchor="middle" opacity="0.8">Network Map</text>
+</svg>

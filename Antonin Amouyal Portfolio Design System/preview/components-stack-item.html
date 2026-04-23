@@ -1,0 +1,23 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><style>
+.bg { background:#f3f4f6; padding:20px; border-radius:10px; }
+.grid { display:grid; grid-template-columns:repeat(5,1fr); gap:14px; }
+.item { background:#fff; border-radius:.5rem; padding:1.25rem; display:flex; flex-direction:column; align-items:center; gap:.75rem; box-shadow:0 1px 3px rgba(0,0,0,.1); font-family:var(--font-sans); }
+.item i { font-size:2rem; color:#2563eb; }
+.item span { font-size:.875rem; font-weight:500; }
+.item.hv { transform:translateY(-5px); box-shadow:0 4px 6px rgba(0,0,0,.1); }
+.item.hv2 { transform:translateY(-8px); box-shadow:0 8px 15px rgba(37,99,235,.2); }
+</style></head><body>
+<div class="card">
+<p class="hlabel">Tech stack cell — rest / hover / libraries-hover</p>
+<div class="bg">
+  <div class="grid">
+    <div class="item"><i class="fa-brands fa-python"></i><span>Python</span></div>
+    <div class="item"><i class="fa-solid fa-database"></i><span>SQL</span></div>
+    <div class="item hv"><i class="fa-brands fa-docker"></i><span>Docker</span></div>
+    <div class="item"><i class="fa-solid fa-table"></i><span>Pandas</span></div>
+    <div class="item hv2"><i class="fa-solid fa-fire"></i><span>PyTorch</span></div>
+  </div>
+</div>
+</div>
+</body></html>

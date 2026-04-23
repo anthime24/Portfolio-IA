@@ -1,0 +1,32 @@
+/* shared preview card styles */
+@import url('../colors_and_type.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: var(--font-sans); color: var(--fg-1); background: #ffffff; -webkit-font-smoothing: antialiased; }
+.card { width: 700px; padding: 28px; }
+
+.hlabel { font-size: 10px; font-weight: 600; color: var(--fg-2); text-transform: uppercase; letter-spacing: 0.1em; margin: 0 0 12px; }
+.mono { font-family: ui-monospace, "JetBrains Mono", monospace; font-size: 11px; color: var(--fg-2); }
+.grid { display: grid; gap: 12px; }
+.row { display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-start; }
+
+/* swatches */
+.sw { width: 100%; aspect-ratio: 1; border-radius: 10px; padding: 10px; display: flex; flex-direction: column; justify-content: space-between; color: #fff; }
+.sw.on-dark { color: #fff; }
+.sw.on-light { color: var(--text-color); }
+.sw .n { font-size: 11px; font-weight: 600; }
+.sw .h { font-family: ui-monospace, monospace; font-size: 10px; opacity: 0.85; }
+.sw.ring { box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08); }
+
+/* type specimens */
+.spec { line-height: 1.1; }
+.spec .meta { display: block; font-size: 10px; color: var(--fg-2); margin-top: 6px; font-family: ui-monospace, monospace; letter-spacing: 0.04em; text-transform: uppercase; }
+
+/* chips */
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; font-size: 12px; background: var(--section-bg); }
+.chip i { color: var(--primary-color); }
+.chip.accent { background: var(--accent-10); color: var(--primary-color); }
+
+/* shadow demo boxes */
+.shbox { width: 100%; height: 60px; background: #fff; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--fg-2); font-family: ui-monospace, monospace; }

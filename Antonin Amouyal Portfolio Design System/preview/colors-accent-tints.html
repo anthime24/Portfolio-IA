@@ -1,0 +1,19 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><style>
+.tints { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+.t { aspect-ratio: 1; border-radius: 10px; padding: 10px; display: flex; flex-direction: column; justify-content: space-between; font-family: ui-monospace, monospace; font-size: 10px; color: #2563eb; box-shadow: inset 0 0 0 1px rgba(37,99,235,0.2); }
+.t .n { font-family: var(--font-sans); font-size: 11px; font-weight: 600; }
+.usage { margin-top: 14px; font-size: 11px; color: var(--fg-2); line-height: 1.55; }
+</style></head><body>
+<div class="card">
+<p class="hlabel">Accent tints — rgba(37,99,235, α)</p>
+<div class="tints">
+  <div class="t" style="background:rgba(37,99,235,0.10)"><span class="n">10%</span><span>tag bg</span></div>
+  <div class="t" style="background:rgba(37,99,235,0.12)"><span class="n">12%</span><span>borders</span></div>
+  <div class="t" style="background:rgba(37,99,235,0.20)"><span class="n">20%</span><span>card border</span></div>
+  <div class="t" style="background:rgba(37,99,235,0.25)"><span class="n">25%</span><span>nav btn</span></div>
+  <div class="t" style="background:rgba(37,99,235,0.40)"><span class="n">40%</span><span>hover</span></div>
+</div>
+<p class="usage">Used for badge backgrounds, subtle card borders, carousel nav outlines, and hover states. Never used on text.</p>
+</div>
+</body></html>

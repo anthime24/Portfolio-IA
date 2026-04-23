@@ -1,0 +1,28 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><style>
+.tag { display:inline-flex; align-items:center; gap:6px; padding:0.25rem 0.75rem; background:#f3f4f6; border-radius:2rem; font-size:12px; font-family:var(--font-sans); }
+.tag i { color:#2563eb; font-size:11px; }
+.tag.active { background:rgba(37,99,235,0.1); }
+.row { display:flex; flex-wrap:wrap; gap:8px; }
+.group { margin-bottom:14px; }
+.group:last-child { margin-bottom:0; }
+.gl { font-size:10px; color:var(--fg-2); font-family:ui-monospace,monospace; letter-spacing:0.05em; text-transform:uppercase; margin-bottom:8px; }
+</style></head><body>
+<div class="card">
+<p class="hlabel">Project tech tags — icon + label, never alone</p>
+<div class="group"><div class="gl">rest</div><div class="row">
+  <span class="tag"><i class="fa-brands fa-python"></i>Python</span>
+  <span class="tag"><i class="fa-solid fa-table"></i>Pandas</span>
+  <span class="tag"><i class="fa-solid fa-fire"></i>TensorFlow</span>
+  <span class="tag"><i class="fa-solid fa-robot"></i>XGBoost</span>
+  <span class="tag"><i class="fa-brands fa-angular"></i>Angular</span>
+  <span class="tag"><i class="fa-solid fa-database"></i>PostgreSQL</span>
+  <span class="tag"><i class="fa-brands fa-docker"></i>Docker</span>
+  <span class="tag"><i class="fa-brands fa-aws"></i>AWS EC2</span>
+</div></div>
+<div class="group"><div class="gl">hover — 10% blue wash</div><div class="row">
+  <span class="tag active"><i class="fa-brands fa-python"></i>Python</span>
+  <span class="tag active"><i class="fa-solid fa-chart-bar"></i>Power BI</span>
+</div></div>
+</div>
+</body></html>

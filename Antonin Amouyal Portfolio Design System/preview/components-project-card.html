@@ -1,0 +1,44 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  .card { padding: 20px; background: #f3f4f6; }
+  .pc { background: #fff; border-radius: 16px; box-shadow: 0 4px 6px rgba(0,0,0,.1); border: 1px solid rgba(0,0,0,.06); overflow: hidden; font-family: 'Poppins', sans-serif; max-width: 300px; }
+  .pc-img { aspect-ratio: 2/1; background: #f3f4f6; }
+  .pc-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .pc-body { padding: 16px; }
+  .pc-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+  .pc-head i { font-size: 20px; color: #2563eb; }
+  .pc-badge { font-size: 10px; font-weight: 500; padding: 3px 8px; background: rgba(37,99,235,.10); color: #2563eb; border-radius: 2rem; }
+  .pc-title { font-size: 16px; font-weight: 600; color: #1f2937; margin: 0 0 4px; }
+  .pc-role { font-size: 12px; color: #6b7280; margin: 0 0 12px; }
+  .pc-tags { display: flex; gap: 6px; }
+  .pc-tag { display: inline-flex; align-items: center; gap: 4px; padding: 3px 8px; background: #f3f4f6; border-radius: 2rem; font-size: 10px; color: #1f2937; }
+  .pc-tag i { color: #2563eb; font-size: 9px; }
+  .row { display: flex; gap: 14px; }
+</style></head><body>
+<div class="card">
+<p class="hlabel" style="color:#6b7280;margin-bottom:14px;">Project cards with generated illustrations — top banner, 2:1 aspect</p>
+<div class="row">
+  <div class="pc">
+    <div class="pc-img"><img src="../assets/project_images/gender-equality.svg" alt=""/></div>
+    <div class="pc-body">
+      <div class="pc-head"><i class="fa-solid fa-balance-scale"></i><span class="pc-badge">School</span></div>
+      <div class="pc-title">Gender Equality</div>
+      <div class="pc-role">Data Analyst</div>
+      <div class="pc-tags"><span class="pc-tag"><i class="fa-brands fa-python"></i>Python</span><span class="pc-tag"><i class="fa-solid fa-chart-bar"></i>Power BI</span></div>
+    </div>
+  </div>
+  <div class="pc">
+    <div class="pc-img"><img src="../assets/project_images/voicera.svg" alt=""/></div>
+    <div class="pc-body">
+      <div class="pc-head"><i class="fa-solid fa-microphone"></i><span class="pc-badge">School</span></div>
+      <div class="pc-title">Voicera AI</div>
+      <div class="pc-role">Data &amp; ML Engineer</div>
+      <div class="pc-tags"><span class="pc-tag"><i class="fa-solid fa-fire"></i>TensorFlow</span><span class="pc-tag"><i class="fa-solid fa-video"></i>MediaPipe</span></div>
+    </div>
+  </div>
+</div>
+</div>
+</body></html>

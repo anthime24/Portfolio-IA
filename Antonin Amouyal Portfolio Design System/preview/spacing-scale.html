@@ -1,0 +1,23 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><style>
+.row { display:flex; flex-direction:column; gap:6px; }
+.bar { display:flex; align-items:center; gap:12px; }
+.bar .b { background:#2563eb; height:14px; border-radius:3px; }
+.bar .lbl { font-family:ui-monospace,monospace; font-size:11px; color:var(--fg-1); min-width:110px; }
+</style></head><body>
+<div class="card">
+<p class="hlabel">Spacing tokens — 4-pt base</p>
+<div class="row">
+  <div class="bar"><span class="lbl">--space-1 · 4px</span><span class="b" style="width:4px"></span></div>
+  <div class="bar"><span class="lbl">--space-2 · 8px</span><span class="b" style="width:8px"></span></div>
+  <div class="bar"><span class="lbl">--space-3 · 12px</span><span class="b" style="width:12px"></span></div>
+  <div class="bar"><span class="lbl">--space-4 · 16px</span><span class="b" style="width:16px"></span></div>
+  <div class="bar"><span class="lbl">--space-6 · 24px</span><span class="b" style="width:24px"></span></div>
+  <div class="bar"><span class="lbl">--space-8 · 32px</span><span class="b" style="width:32px"></span></div>
+  <div class="bar"><span class="lbl">--space-12 · 48px</span><span class="b" style="width:48px"></span></div>
+  <div class="bar"><span class="lbl">--space-16 · 64px</span><span class="b" style="width:64px"></span></div>
+  <div class="bar"><span class="lbl">--space-24 · 96px</span><span class="b" style="width:96px"></span></div>
+</div>
+<p style="margin:14px 0 0;font-size:11px;color:var(--fg-2);line-height:1.55">Section vertical padding is always <code>--space-24</code> (6rem). Card inner padding is <code>--space-6</code> (1.5rem).</p>
+</div>
+</body></html>

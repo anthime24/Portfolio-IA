@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="wash2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0f9ff"></stop>
+      <stop offset="1" stop-color="#e0f2fe"></stop>
+    </linearGradient>
+    <pattern id="dots2" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="1.2" cy="1.2" r="0.8" fill="#2563eb" opacity="0.18"></circle>
+    </pattern>
+  </defs>
+
+  <rect width="400" height="200" fill="url(#wash2)"></rect>
+  <rect width="400" height="200" fill="url(#dots2)"></rect>
+
+  
+  <g stroke="#1f2937" stroke-width="1.8" fill="none" stroke-linecap="round">
+    <rect x="188" y="52" width="24" height="46" rx="12" fill="#fff"></rect>
+    <path d="M174 92 Q174 120 200 120 Q226 120 226 92"></path>
+    <line x1="200" y1="120" x2="200" y2="142"></line>
+    <line x1="188" y1="142" x2="212" y2="142"></line>
+  </g>
+
+  
+  <g stroke="#2563eb" stroke-width="0.6" opacity="0.5">
+    <line x1="192" y1="60" x2="208" y2="60"></line>
+    <line x1="192" y1="68" x2="208" y2="68"></line>
+    <line x1="192" y1="76" x2="208" y2="76"></line>
+    <line x1="192" y1="84" x2="208" y2="84"></line>
+    <line x1="192" y1="92" x2="208" y2="92"></line>
+  </g>
+
+  
+  <g stroke="#2563eb" stroke-width="1.4" fill="none" stroke-linecap="round">
+    <path d="M30 100 L50 100 L50 80 L60 80 L60 120 L70 120 L70 70 L80 70 L80 130 L90 130 L90 90 L100 90 L100 100 L120 100 L120 85 L130 85 L130 115 L140 115 L140 100 L160 100"></path>
+  </g>
+
+  
+  <g stroke="#2563eb" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-dasharray="3 3" opacity="0.75">
+    <path d="M240 100 L260 100 L260 90 L270 90 L270 110 L280 110 L280 75 L290 75 L290 125 L300 125 L300 95 L310 95 L310 105 L330 105 L330 85 L340 85 L340 115 L350 115 L350 100 L370 100"></path>
+  </g>
+
+  
+  <g font-family="ui-monospace, monospace" font-size="10" fill="#2563eb">
+    <text x="245" y="60" opacity="0.85">generated</text>
+  </g>
+  <g font-family="ui-monospace, monospace" font-size="10" fill="#1f2937" opacity="0.7">
+    <text x="40" y="60">input</text>
+  </g>
+
+  
+  <g stroke="#1f2937" stroke-width="1" fill="none" opacity="0.4">
+    <line x1="165" y1="100" x2="175" y2="100" marker-end="url(#a)"></line>
+    <line x1="225" y1="100" x2="235" y2="100"></line>
+  </g>
+</svg>
