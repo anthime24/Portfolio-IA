@@ -95,6 +95,23 @@ const __shared = {
       { n: "RAG",             i: "fa-solid fa-magnifying-glass" },
       { n: "FastAPI",         i: "fa-solid fa-bolt" }
     ]
+  },
+  "remotehub-ai": {
+    image: "assets/project_images/remotehub-ai.svg",
+    icon: "fa-solid fa-satellite-dish",
+    stats: [
+      { value: 0, suffix: "", label: "Ports exposed to the Internet", labelFr: "Ports exposés à Internet" },
+      { value: 7, suffix: "", label: "Setup & security guides",      labelFr: "Guides d'installation & sécurité" },
+      { value: 2, suffix: "", label: "Languages (EN / FR)",           labelFr: "Langues (EN / FR)" }
+    ],
+    tags: [
+      { n: "Python",         i: "fa-brands fa-python" },
+      { n: "SSH / SFTP",     i: "fa-solid fa-terminal" },
+      { n: "Tailscale",      i: "fa-solid fa-network-wired" },
+      { n: "CustomTkinter",  i: "fa-solid fa-window-maximize" },
+      { n: "PowerShell",     i: "fa-solid fa-code" },
+      { n: "GitHub Actions", i: "fa-brands fa-github" }
+    ]
   }
 };
 
@@ -526,6 +543,84 @@ __fr_projects.push({
       "Connecter plusieurs briques avancées (vision, données, génération)",
       "Transformer un besoin utilisateur en produit concret",
       "Gérer la complexité tout en maintenant une expérience simple"
+    ]}
+  ]
+});
+
+// ---------- REMOTEHUB-AI (EN) ----------
+__en_projects.push({
+  slug: "remotehub-ai",
+  title: "RemoteHub-AI — Remote PC Cockpit",
+  role: "Python Developer & Security-minded Builder",
+  date: "Oct 2026",
+  context: "Personal Project",
+  description: "Open-source desktop app to control a home PC from anywhere — wake it, open a terminal, run AI models, browse files, use a Linux VM — over a private Tailscale/SSH link with no port exposed to the Internet.",
+  sections: [
+    { title: "Context", content: "I own a powerful PC at home (GPU, lots of RAM, big disks) and a lighter laptop. I wanted to use the first from the second without opening ports on my router, paying for a cloud GPU or juggling five different tools. RemoteHub-AI is the cockpit: one window, one SSH session, and everything else hangs off it. Released as an open-source project (MIT) in English and French." },
+    { title: "Architecture & Approach", items: [
+      "Single SSH session over Tailscale carries everything: commands, port forwarding, SOCKS5 proxy and SFTP",
+      "Wake-on-LAN on every local interface, via an always-on relay, or through the router's API to wake the tower from outside the LAN",
+      "Live telemetry (CPU, RAM, GPU, VRAM, temperature, free disk) and launcher cards for Ollama, ComfyUI, JupyterLab, Docker, WSL2, RustDesk and a VirtualBox Ubuntu VM",
+      "File explorer over SFTP: browse, search, safe downloads (.part files renamed when complete), folder upload with progress and cancel",
+      "Extensible by configuration: a new launcher is ten lines of YAML, no code",
+      "Tower-side PowerShell scripts for one-command setup: OpenSSH, key login, firewall lock-down, services bound to loopback only"
+    ]},
+    { title: "Security by Design", items: [
+      "Nothing exposed to the Internet: SSH is the only door, reachable only through Tailscale after lock-down",
+      "Host-key pinning: if the tower's key changes, the app refuses to connect and explains why",
+      "Secrets never reach git: a privacy checker blocks commits containing IPs, MACs, tokens or keys, and CI runs it too",
+      "Documented threat model with residual risks and Tailscale ACL examples"
+    ]},
+    { title: "Results", items: [
+      "Working v1.0.0 released publicly with CI, unit tests and a --demo mode that runs with fake data",
+      "Bilingual UI and 7 documentation guides (tower, laptop, Wake-on-LAN, Linux VM, configuration, security, troubleshooting)",
+      "One window to wake the machine and reach every service from any network"
+    ]},
+    { title: "Skills Demonstrated", items: [
+      "Desktop application design in Python (CustomTkinter)",
+      "Network programming: SSH, SFTP, tunnels, SOCKS5, Wake-on-LAN",
+      "Security thinking: threat modelling, least exposure, key management",
+      "Open-source hygiene: CI, tests, changelog, contribution guide, i18n",
+      "Windows automation with PowerShell"
+    ]}
+  ]
+});
+
+// ---------- REMOTEHUB-AI (FR) ----------
+__fr_projects.push({
+  slug: "remotehub-ai",
+  title: "RemoteHub-AI — Cockpit de PC à distance",
+  role: "Développeur Python & Sécurité",
+  date: "Octobre 2026",
+  context: "Projet Personnel",
+  description: "Application de bureau open source pour piloter son PC depuis n'importe où — l'allumer, ouvrir un terminal, lancer des modèles d'IA, parcourir ses fichiers, utiliser une VM Linux — via un lien privé Tailscale/SSH, sans aucun port exposé à Internet.",
+  sections: [
+    { title: "Contexte", content: "Je possède un PC puissant à la maison (GPU, beaucoup de RAM, gros disques) et un portable plus léger. Je voulais utiliser le premier depuis le second sans ouvrir de ports sur ma box, sans payer un GPU cloud et sans jongler entre cinq outils. RemoteHub-AI est le cockpit : une fenêtre, une session SSH, et tout le reste en découle. Publié en open source (MIT), en anglais et en français." },
+    { title: "Architecture & démarche", items: [
+      "Une seule session SSH sur Tailscale transporte tout : commandes, redirections de ports, proxy SOCKS5 et SFTP",
+      "Wake-on-LAN sur toutes les interfaces locales, via un relais toujours allumé, ou via l'API de la box pour réveiller la tour depuis l'extérieur du réseau local",
+      "Télémétrie en direct (CPU, RAM, GPU, VRAM, température, disque libre) et cartes de lancement pour Ollama, ComfyUI, JupyterLab, Docker, WSL2, RustDesk et une VM Ubuntu VirtualBox",
+      "Explorateur de fichiers via SFTP : navigation, recherche, téléchargements sûrs (fichiers .part renommés à la fin), envoi de dossiers avec progression et annulation",
+      "Extensible par configuration : un nouveau lanceur = dix lignes de YAML, sans code",
+      "Scripts PowerShell côté tour pour une installation en une commande : OpenSSH, connexion par clé, verrouillage du pare-feu, services liés uniquement à la boucle locale"
+    ]},
+    { title: "Sécurité dès la conception", items: [
+      "Rien n'est exposé à Internet : SSH est la seule porte, accessible uniquement via Tailscale après verrouillage",
+      "Épinglage de la clé d'hôte : si la clé de la tour change, l'application refuse la connexion et explique pourquoi",
+      "Les secrets n'arrivent jamais dans git : un vérificateur de confidentialité bloque les commits contenant IP, MAC, jetons ou clés, et la CI l'exécute aussi",
+      "Modèle de menaces documenté avec risques résiduels et exemples d'ACL Tailscale"
+    ]},
+    { title: "Résultats", items: [
+      "Version 1.0.0 publiée avec CI, tests unitaires et un mode --demo qui fonctionne avec de fausses données",
+      "Interface bilingue et 7 guides de documentation (tour, portable, Wake-on-LAN, VM Linux, configuration, sécurité, dépannage)",
+      "Une seule fenêtre pour réveiller la machine et atteindre tous ses services depuis n'importe quel réseau"
+    ]},
+    { title: "Compétences démontrées", items: [
+      "Conception d'une application de bureau en Python (CustomTkinter)",
+      "Programmation réseau : SSH, SFTP, tunnels, SOCKS5, Wake-on-LAN",
+      "Réflexion sécurité : modèle de menaces, exposition minimale, gestion des clés",
+      "Rigueur open source : CI, tests, changelog, guide de contribution, i18n",
+      "Automatisation Windows avec PowerShell"
     ]}
   ]
 });
